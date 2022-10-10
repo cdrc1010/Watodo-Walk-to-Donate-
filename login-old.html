@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WATODO</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+<link rel="stylesheet" href="css/style_admin.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,600;1,300;1,600&display=swap" rel="stylesheet">
+<!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+
+<body>
+
+
+        <div class="content">
+
+            <div class="right">
+                <img id="pic" src="css/signup.png">
+            </div>
+
+            <div class="left">
+                <br>
+                
+                <p class="text">exclusive to admins,</p>
+                <p class="text">download the app <a href="#">here</a> to get the whole experience</p>
+                <h2>LOG-IN</h2><br>
+
+                <form id="login-form">
+
+                    <div class="input-field">
+                        <input type="email" id="login-email" placeholder="Email" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="login-password" placeholder="Password" autocomplete="on" required>
+                        <i class="bi bi-eye-slash" id="togglePassword"></i>
+                    </div>
+
+                    <div class="move">
+                        <a class="forget" href="#">
+                            forgot password
+                        </a>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn" id="btn-donate1">Login</button>
+
+                </form>
+
+
+
+
+
+            </div>
+        </div>
+       
+
+            <!-- <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+            <script src="config.js"></script>
+            <script src="app-login_admin-3.js"></script> -->
+            <!-- <script src="auth.js"></script> -->
+            <!-- <script>
+                const togglePassword = document.querySelector("#togglePassword");
+                const password = document.querySelector("#login-password");
+
+                togglePassword.addEventListener("click", function() {
+                    // toggle the type attribute
+                    const type = password.getAttribute("type") === "password" ? "text" : "password";
+                    password.setAttribute("type", type);
+
+                    // toggle the icon
+                    this.classList.toggle("bi-eye");
+                });
+
+                // // prevent form submit
+                // const form = document.querySelector("form");
+                // form.addEventListener('submit', function(e) {
+                //     e.preventDefault();
+                // });
+                auth.onAuthStateChanged(user => {
+    if (user) {
+
+        db.collection('adminCollection').doc(user.uid).get().then(doc =>{
+                    var usertype1 = doc.data();
+                    var usertypeValue = usertype1.userType;
+                    if(usertypeValue == "Super Admin" ){
+                        window.location.href="index-1.html";
+                    }
+
+                    
+                
+                   
+                }).catch(error => {
+                        db.collection('users_donors').doc('users').collection('usersList').doc(user.uid).get().then(doc =>{
+                            var usertype1 = doc.data();
+                            var usertypeValue = usertype1.userType;
+                            if(usertypeValue == "user" ){
+                                window.location = "index100.php";
+                            }
+                            }).catch(error =>
+                            {  window.location = "index-donor.php"});
+                   
+                }); 
+            }
+});
+            </script> -->
+</body>
+
+</html>
