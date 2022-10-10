@@ -1,0 +1,19 @@
+.card-single {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.cards{
+    color:var(--main-color);
+}
+.card-single:nth-child(3) {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.card-single div:last-child span {
+    font-size: 3rem;
+}

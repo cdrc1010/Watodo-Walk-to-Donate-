@@ -1,0 +1,55 @@
+body{
+    font-family: 'Poppins';
+}
+.create{
+    width:100%;
+    background: #DCEBF6;
+    padding:5px 20px 0 5px;
+    border-radius: 2px;
+    border:1px solid rgba(34,36,38,.15);
+    text-align:center;
+}
+
+.field{
+    margin:12px 10px;
+    
+}
+#files{
+    background-color: white;
+    border-radius: 3px;
+    width: 100%;
+}
+
+select{
+    width:100%;
+    border:1px solid rgba(34,36,38,.15);
+    padding: 8px;
+    border-radius: 3px;
+    color: #555;
+}
+.field input{
+    width: 100%;
+    outline: none;
+    line-height: 25px;
+    border:none;
+    padding: 8px;
+    border-radius: 3px;
+    color: #555;
+}
+
+#password,#confirmPass{
+    width:97%;
+}
+#btn-create{
+    background:#00b5ad;
+    color: white;    
+    font-weight: bold;
+    width: 595px;
+
+}
+
+#btn-create:hover{
+    background:#00b5ad;
+    color: white;
+    opacity:.87;
+}

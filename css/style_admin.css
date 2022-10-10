@@ -1,0 +1,130 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+    background: white;
+}
+
+.content {
+    margin-top: 20px;
+    display: flex;
+    border: 1px solid red;
+}
+
+
+.left {
+    flex-basis: 50%;
+    border: 1px solid green;
+    text-align: center;
+}
+
+.left h2 {
+    line-height: 100px;
+    color: #114084;
+}
+
+.right {
+    flex-basis: 70%;
+    padding-left: 100px;
+    font-style: bold;
+    border: 1px solid yellow;
+}
+
+#pic {
+    width: 500px;
+    height: 500px;
+}
+
+
+
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-color: #114084;
+    color: #114084;
+}
+
+
+
+.input-field {
+    line-height: 50px;
+}
+
+.input-field input {
+    width: 80%;
+    height: 50px;
+}
+
+input {
+    outline: none;
+}
+
+
+#login-password {
+    width: 77%;
+}
+
+.input-field:nth-child(7) {
+    width: 15%;
+    margin-left: 44px;
+}
+
+#btn-donate1 {
+    background: rgb(17, 64, 132);
+    color: white;
+    border-radius: 5px;
+    transition: transform .5s;
+    padding: 10px 20px;
+    font-family: 'poppins';
+    border: none;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: .5s;
+}
+
+#btn-donate1:hover {
+    background: rgba(17, 64, 132, .8);
+}
+
+.move a:hover {
+    text-decoration: underline;
+}
+
+.move a {
+    font-size: 10px;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+#signup-brgy,
+#signup-brgy1 {
+    margin-left: 8px;
+    width: 140px;
+    border: 2px solid #114084;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #114084;
+}
+
+#signup-brgy1 {
+    margin-right: 17.5rem;
+}
+
+#signup-brgy {
+    margin-left: 13px;
+}
