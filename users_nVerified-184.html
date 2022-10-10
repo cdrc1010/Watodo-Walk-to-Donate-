@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="shortcut icon" href="css/logo-2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="css/dist_style.css">
+    <link rel="stylesheet" href="css/card_style_declined2.css">
+    <link rel="stylesheet" href="css/modal-2.css">
+    <link rel="stylesheet" href="css/admin_modal-3.css">
+    <link rel="stylesheet" href="css/tablestyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Admin</title>
+</head>
+
+<body>
+
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><img src="css/logo-2.png" height="60px" width="60px"><span class="brandname">Watodo</span></h2>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="index-184.html"><span class="las la-igloo"></span>
+                    <span>Dasboard</span></a>
+                </li>
+                <li>
+                    <a href="users-184.html" class="active"><span class="las la-users"></span>
+                    <span>Users</span></a>
+                </li>
+                <li>
+                    <a href="donor-184.html"><span class="las la-user-tie"></span>
+                    <span>Donor</span></a>
+                </li>
+                <li>
+                    <a href="" style="cursor:default;"><span class="las la-building"></span>
+                    <span>Brgy</span></a>
+                </li>
+                <li class="brgy">
+                    <a href="184-ca.html" ><span class="las la-gift"></span>
+                    <span>184</span></a>
+                </li>
+                
+                <li>
+                    <a href="dist3-ca-184.html"    ><span class="las las la-city"></span>
+                    <span>District 3 Donations</span></a>
+                </li>
+                <li>
+                    <a href="message-ca-184.html"><span class="las la-user-circle"></span>
+                    <span>Feedback / Message</span></a>
+                </li>
+                <li>
+                    <a href="account-ca-184.html"><span class="las la-users-cog"></span>
+                    <span>Accounts</span></a>
+                </li>
+                <li>
+                    <a href="" id="logout"><span class="las la-sign-out-alt"></span>
+                    <span>Sign out</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle">
+                 <span class="las la-bars"></span>
+             </label> Dashboard
+            </h2>
+            <div class="search-wrapper">
+                <span class="las la-search"></span>
+                <input type="search" placeholder="Search Here">
+            </div>
+            <div class="user-wrapper" style="cursor:pointer">
+                <img src="https://via.placeholder.com/150" id="img" alt="" height="30px" width="30px">
+                <div class="acc-details">
+                    <h4 id="name_Admin"></h4>
+                    <small id="utype_Admin"></small>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="cards ">
+                <div class="card-single" onclick="pending()">
+                    <div>
+                        <h1 id="value"></h1>
+                        <span>Total</span>
+                    </div>
+                    <div>
+                        <span class="las la-users "></span>
+                    </div>
+                </div>
+
+                <div class="card-single " onclick="accepted()">
+                    <div>
+                        <h1 id="value1"></h1>
+                        <span>Verified</span>
+                    </div>
+                    <div>
+                        <span class="las la-user-check "></span>
+                    </div>
+                </div>
+
+                <div class="card-single " onclick="declined()">
+                    <div>
+                        <h1 id="value2"></h1>
+                        <span>Not Verified</span>
+                    </div>
+                    <div>
+                        <span class="las la-user "></span>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <!-- <form id="add-cafe-form">
+                    <input type="text" name="name" placeholder="Cafe Name">
+                    <input type="text" name="city" placeholder="Cafe City">
+                    <button type="submit">Add Cafe</button>
+                </form> -->
+                <ul id="cafe-list"></ul>
+            </div>
+            <!-- Donation Modal -->
+            <div class="modal-bg">
+                <div class="modal" id="modal-account">
+                    <div class="modal-content center-align">
+
+                        <h3>Donation Details</h3>
+                        <span class="modal-close">X</span>
+                        <div class="account-details"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Modal -->
+            <div class="modal-bg1">
+                <div class="modal1" id="modal-account">
+                    <div class="modal-content center-align">
+
+                        <h3>Account Details</h3>
+                        <span class="modal-close1">X</span>
+                        <div class="account-details1"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+    </div>
+
+    <script>
+        function pending() {
+            window.location.href = "users-184.html";
+        }
+
+        function accepted() {
+            window.location.href = "users_verified-184.html";
+        }
+
+        function declined() {
+            window.location.href = "#";
+        }
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
+    <script src="js/config-f.js"></script>
+    <script src="js/auth-1-f.js"></script>
+    <script src="js/user_app_nVerified-184.js"></script>
+    <script src="js/logout-1.js"></script>
+</body>
+
+</html>
